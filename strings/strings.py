@@ -15,7 +15,7 @@ print(posicao_Letra[5])
 
 frase = "Olá, Mundo!"
 
-parte = frase[4:8] 
+parte = frase[4:8]
 # o primeiro parametro passado é o indicie apartir de onde sera imprimido
 # o segutdo é até onde;
 print(parte)
@@ -37,7 +37,6 @@ if "lauricio2" in frase:
     print("sim a palavra esta na frase")
 
 
-
 # removendo espaços em branco;
 
 frase = "    mior programador lauricio      "
@@ -46,15 +45,13 @@ print("remove espaços em branco de uma frase")
 
 print(frase.strip())
 # o strip ira remover da string o caractere informado por parametro
-#ex => frase.strip(*)  ira remover todos os "*" da frase
-
+# ex => frase.strip(*)  ira remover todos os "*" da frase
 
 
 # transformando frase em array separando por espaço em branco;
 texto = "este é apenas um texto de exemplo"
-texto = texto.split() 
+texto = texto.split()
 print(texto)
-
 
 
 # transformando array em frase separadas por espaço em branco
@@ -77,13 +74,23 @@ mensagem = f"Olá meu nome é {nome}. e tenho {idade} de idade e minha altura é
 print(mensagem)
 
 
+# alterando tamano das letras.
+
+texto = "Olá Mundo!"
+textoMaiusculo = texto.upper()
+textoMinusculo = texto.lower()
+textoCaptalize = texto.capitalize()
+
+print(textoMaiusculo)
+print(textoMinusculo)
+print(textoCaptalize)
 
 
+#pegando a quantidade de uma letra que contem na string
 
+ocorrencia = texto.count("o") #ira retornar a quantidade de letra 0 no texto;
+print(ocorrencia)
 
-
-
-
-
-
-
+#substituindo caractere
+textoSubstituido = texto.replace("Mundo", "Amigo");
+print(textoSubstituido)
