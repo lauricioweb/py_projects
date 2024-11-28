@@ -23,7 +23,7 @@ while tentativas > 0 and (not advinhou1 or not advinhou2):
  # se o palpite é igual ao numero secreto
   if palpite2 == numeroSecreto2:
 
-    print("voce advinhou o primeiro numero")
+    print("voce advinhou o segundo numero")
     advinhou2 = True
 
 
@@ -31,6 +31,8 @@ while tentativas > 0 and (not advinhou1 or not advinhou2):
   if not advinhou1 or not advinhou2:
 
     print("tente novamente !")
+    advinhou1 = False
+    advinhou2 = False
     tentativas -= 1
 
 # verificando se os numeros estão corretos
