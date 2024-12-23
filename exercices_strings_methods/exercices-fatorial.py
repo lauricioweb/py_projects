@@ -15,4 +15,10 @@ for multiplicador in range(1,num + 1):
 
    print(f"{multiplicador}", end=" ")
 
-print(fatorial)
+   for i in range(1, multiplicador + 1):
+     print(i, end=" ")
+     
+     if i != multiplicador:
+        print(" * ", end="")
+
+   print("=",fatorial)
