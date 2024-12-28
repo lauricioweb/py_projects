@@ -1,7 +1,8 @@
 """
 variaveis locais vs globais
 
-variaveis globais são criadas fora de funções ou laços, podem ser acessadas em qualquer parte do codigo
+variaveis globais são criadas fora de funções ou laços, podem
+ser acessadas em qualquer parte do codigo
 variaveis locais são criadas dentro de função e so podem ser acessadas dentro do escopo desta função
 """
 
@@ -25,4 +26,51 @@ def show():
   print(global_variable)
 
 
-show()
+#show()
+
+"""
+usando  variavel global
+"""
+
+
+contador = 1
+
+def addContador():
+    global contador
+
+    contador += 1
+    print(contador)
+
+
+#addContador()
+#addContador()
+
+
+"""
+variavel nonlocal
+são variaveis criadas dentro de uma função que serão modificadas
+dentro de uma  função aninhada para isso usa se a palavra chave "nonlocal"
+e então esta varival sera modificada dentro de uma função interna
+
+"""
+
+def externfunc():
+    variavelExterna = "sou uma variavel extertan"
+    print(variavelExterna)
+
+    def internFunc():
+        nonlocal variavelExterna
+
+        variavelExterna = "fui modificada por uma função interna"
+
+        print(variavelExterna)
+
+    internFunc()
+    print(variavelExterna)
+
+externfunc()
+
+
+
+
+
