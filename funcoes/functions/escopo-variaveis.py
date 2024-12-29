@@ -68,9 +68,62 @@ def externfunc():
     internFunc()
     print(variavelExterna)
 
-externfunc()
+#externfunc()
+
+"""
+função sendo passada a uma variavel
+
+"""
+
+def myFunc():
+    return "sou uma function"
+
+
+funcao = myFunc
+#variaval funcao recebe o valor retornado
+
+#print(funcao())
+
+"""
+passando funções como argumentos
+
+"""
+
+def saudacao(nome):
+    return f"ola {nome}"
+
+
+def comprimentar(func,nome):
+    return func(nome)
+# esta função retorna o valor retornado da função acima
+
+#print (comprimentar(saudacao, "lauricio"))
 
 
 
+"""
+
+retornando funções de funções
+
+"""
 
 
+# de aconrdo com o parametro passado para a função sera retornado uma função diferente
+
+def saudacao_nivel(nivel):
+
+    def saudacao_base():
+        return "oi"
+
+    def saudacao_avancada():
+        return "olá tudo bem ?"
+
+    if nivel == "base":
+        return saudacao_base()
+    else:
+        return saudacao_avancada()
+
+
+
+cumprimento = saudacao_nivel("avancada")
+print(cumprimento)
