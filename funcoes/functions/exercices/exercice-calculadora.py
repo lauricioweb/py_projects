@@ -1,33 +1,54 @@
-operacao = input("digita a operação que deseja execultar")
+def factoryFunction(operation):
 
-def calculadora(operacao):
-  n1 = int(input("digite o numero 1"))
-  n2 = int(input("digite o numero 2"))
+  def soma(*args):
 
-  def soma(n1,n2):
-    return n1 + n2
+    return sum(args)
   
-  def subtrai(n1,n2):
-    return n1 - n2
+  def sub(*args):
+
+    resultado = args[0]
+    
+    for num in args[1:]:
+      resultado -= num
+
+    return resultado
   
-  def divide(n1,n2):
-    return n1 / n2
+  def mult(*args):
+    resultado = args[0]
+    
+    for num in args[1:]:
+      resultado *= num
+    
+    return resultado
+
+  def divisao(*args):
+    resultado = args[0]
+    
+    for num in args[1:]:
+      
+      if num == 0:
+        raise ValueError("nao é possivel dividir por 0")
+      
+      resultado /= num
+    
+    return resultado
+
+
+  if operation == "soma":
+    return soma
   
-  def multi(n1,n2):
-    return n1 * n2
+  elif operation == "subtrair":
+    return sub
   
-  if operacao == "soma":
-     return soma(n1,n2)
+  elif operation == "mult":
+    return mult 
 
-  elif operacao == "subtrai":
-     return subtrai(n1,n2)
+  elif operation == "divisao":
+    return divisao
+  
+  
 
-  elif operacao == "dividir":
-     return divide(n1,n2)
+myoperation = factoryFunction("divisao")
 
-  elif operacao == "multi":
-     return multi(n1,n2)
-
-
-result = calculadora(operacao)
+result = myoperation(10,2)
 print(result)
