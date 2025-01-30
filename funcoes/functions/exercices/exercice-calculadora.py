@@ -33,7 +33,11 @@ def factoryFunction(operation):
     
     return resultado
 
+  def errorOperation(*args):
+    return "operação invalida!"
 
+
+   ### as funções abaixo nao estao sendo chamadaas sem a nescessidade de passar argumentos/ estao apenas sendo retornadas
   if operation == "soma":
     return soma
   
@@ -45,10 +49,13 @@ def factoryFunction(operation):
 
   elif operation == "divisao":
     return divisao
+
+  else:
+    return errorOperation
   
   
 
-myoperation = factoryFunction("divisao")
+myoperation = factoryFunction("divisao2")
 
-result = myoperation(10,2)
+result = myoperation(10,2,0)
 print(result)
