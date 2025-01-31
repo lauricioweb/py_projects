@@ -21,6 +21,10 @@ frame_tela.grid(row=0, column=0)
 frame_corpo = Frame(janela, width=185, height=220)
 frame_corpo.grid(row=1, column=0)
 
+## crinado label
+app_label = Label(frame_tela, text="123234", width=19, height=3)
+app_label.place(x=0, y=0)
+
 
 #botoes
 b1 = Button(frame_corpo, text="C", width=11, height=2, bg=btnColor)
