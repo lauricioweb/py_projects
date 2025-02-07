@@ -4,6 +4,7 @@ from tkinter import ttk
 cor1 = "#3c3c3c"
 cor2 = "#38576b"
 cor3 = "#008"
+cor4 = "#fff"
 
 btnColor = "#e4c3c2"
 btnBorder = "#3ff"
@@ -20,6 +21,25 @@ frame_tela.grid(row=0, column=0)
 
 frame_corpo = Frame(janela, width=185, height=220)
 frame_corpo.grid(row=1, column=0)
+
+## funcao que adiciona o texto no label
+
+def calcular():
+    resultado = eval("1+4")
+
+    text_result.set(resultado)
+
+
+
+text_result = StringVar()
+
+
+calcular()
+
+## crinado label
+app_label = Label(frame_tela, textvariable=text_result, width=16, height=2, anchor="e", font=("Ivi 14"), bg=cor2, justify=RIGHT)
+app_label.place(x=0, y=0)
+
 
 
 #botoes
@@ -63,7 +83,6 @@ b17 = Button(frame_corpo, text=".", width=5, height=2, bg=btnColor)
 b17.place(x=92, y=180)
 b18 = Button(frame_corpo, text="=", width=5, height=2, bg=btnColor)
 b18.place(x=139, y=180)
-
 
 
 janela.mainloop()
