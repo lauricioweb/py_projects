@@ -24,4 +24,8 @@ numbers_pair = list(filter(lambda x: x % 2 == 0, numbers_p))
 #filter recebe como primeiro parametro uma função que ira validar se cada item do array passado como segundo parametro  cumpre os requisitos da função.
 
 # a funcao passada no primeiro parametro é chamada para cada item.  
+
+
+# o filter retorna um objeto iteravel, por isso usamos o list() para converter para array,
+
 print(numbers_pair)
