@@ -98,3 +98,11 @@ lista_nomes = ["lauricio","mariana","luiza","yasmin", "yasmin","yasmin"]
 
 quantidade_elemento = lista_nomes.count("yasmin")
 print(quantidade_elemento)
+
+print("==========================")
+# index() retorna a primeira ocorencia do elemento na lista
+
+elements_list = ["carro","casa","apartamento"]
+
+element_indice = elements_list.index("casa")
+print(element_indice)
