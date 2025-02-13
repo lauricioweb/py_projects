@@ -80,3 +80,21 @@ print(lista_de_frutas)
 
 lista_de_numeros.sort() # para ordenar na forma decrecente use reverse=True 
 print(lista_de_numeros)
+
+print("====================")
+
+# reverse() reverte a ordem dos elementos da lista (esta funcao nao retorna a lista reversa  apenas modifica a lista na qual foi chamada esta metodo)
+
+normal_list = ["maca","morango","uva","melancia"]
+normal_list.reverse()
+print(normal_list)
+
+print("====================")
+
+
+# count() retorna o numero de vezes que um elemento aparece na lista
+
+lista_nomes = ["lauricio","mariana","luiza","yasmin", "yasmin","yasmin"]
+
+quantidade_elemento = lista_nomes.count("yasmin")
+print(quantidade_elemento)
