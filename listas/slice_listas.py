@@ -21,3 +21,8 @@ print(inicial)
 
 alternados = exemplo_lista[::2] #saida [0,2,4,6]
 print(alternados)
+
+# definindo o limite para o acesso auternado
+
+alternado_limited = exemplo_lista[1:5:2]
+print(alternado_limited)
