@@ -11,7 +11,8 @@ def regression(n):
 
 
 #regression(10)
-
+lista = ["nomes","idades"]
+lista.pop()
 
 """
 fatorial é uma numero multiplicado por todos os seus antecessores
